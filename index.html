@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nike Shoes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="button.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="bcg" v-bind:style="{backgroundImage: mode}">
+      <div class="toggle toggle--daynight">
+        <input
+          type="checkbox"
+          id="toggle--daynight"
+          class="toggle--checkbox"
+          @click="changeMode()"
+        />
+        <label class="toggle--btn" for="toggle--daynight"
+          ><span class="toggle--feature"></span
+        ></label>
+      </div>
+      <div class="container">
+        <div class="card">
+          <div class="imgBx">
+            <img src="shoe-green.png" alt="" />
+          </div>
+          <div class="contentBx">
+            <h2>Nike Shoes</h2>
+            <div class="size">
+              <h3>Size:</h3>
+              <span>39</span>
+              <span>40</span>
+              <span>41</span>
+              <span>42</span>
+            </div>
+            <div class="color">
+              <h3>Color:</h3>
+              <span> </span>
+              <span> </span>
+              <span> </span>
+            </div>
+            <div class="buyNow">
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="shoe-blue.png" alt="" />
+          </div>
+          <div class="contentBx">
+            <h2>Nike Shoes</h2>
+            <div class="size">
+              <h3>Size:</h3>
+              <span>39</span>
+              <span>40</span>
+              <span>41</span>
+              <span>42</span>
+            </div>
+            <div class="color">
+              <h3>Color:</h3>
+              <span> </span>
+              <span> </span>
+              <span> </span>
+            </div>
+            <div class="buyNow"><a href="#">Buy Now</a></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="shoe-black.png" alt="" />
+          </div>
+          <div class="contentBx">
+            <h2>Nike Shoes</h2>
+            <div class="size">
+              <h3>Size:</h3>
+              <span>39</span>
+              <span>40</span>
+              <span>41</span>
+              <span>42</span>
+            </div>
+            <div class="color">
+              <h3>Color:</h3>
+              <span> </span>
+              <span> </span>
+              <span> </span>
+            </div>
+            <div class="buyNow"><a href="#" class="btn">Buy Now</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const app = new Vue({
+      el: "#bcg",
+      data: {
+        day:
+          "radial-gradient( circle farthest-corner at 1.3% 2.8%,  rgba(239,249,249,1) 0%, rgba(182,199,226,1) 100.2% )",
+        night:
+          "radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% )",
+        mode:
+          "radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% )",
+      },
+      methods: {
+        changeMode: function () {
+          let mode = document.getElementById("toggle--daynight");
+          if (mode.checked == true) {
+            console.log("Day Mode");
+            this.mode = this.day;
+          } else {
+            console.log("Night Mode");
+            this.mode = this.night;
+          }
+        },
+      },
+    });
+  </script>
+</html>
