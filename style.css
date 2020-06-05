@@ -190,8 +190,18 @@
   cursor: pointer;
 }
 
-.container .card .contentBx .size span:hover {
+.container .card:nth-child(1) .contentBx .size span:hover {
   background: #9bdc28;
+  transform: scale(1.1);
+}
+
+.container .card:nth-child(2) .contentBx .size span:hover {
+  background: rgb(1, 156, 194);
+  transform: scale(1.1);
+}
+
+.container .card:nth-child(3) .contentBx .size span:hover {
+  background: rgb(215, 216, 218);
   transform: scale(1.1);
 }
 
