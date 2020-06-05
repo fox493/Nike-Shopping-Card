@@ -13,13 +13,6 @@
   transition: 0.5s;
 }
 
-.night-day {
-  position: absolute;
-  top: 30px;
-  left: 1200px;
-  cursor: pointer;
-}
-
 .container {
   position: absolute;
   top: 55%;
@@ -199,6 +192,7 @@
 
 .container .card .contentBx .size span:hover {
   background: #9bdc28;
+  transform: scale(1.1);
 }
 
 .container .card .contentBx .color span {
@@ -207,6 +201,11 @@
   border-radius: 50%;
   margin: 0 5px;
   cursor: pointer;
+  transition: 0.25s;
+}
+
+.container .card .contentBx .color span:hover {
+  transform: scale(1.2);
 }
 
 .container .card .contentBx .color span:nth-child(2) {

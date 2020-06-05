@@ -16,8 +16,8 @@ Some defaults across all toggle demos
 ===================================================== */
 .toggle {
   position: absolute;
-  top: 20px;
-  left: 1100px;
+  top: 10%;
+  left: 85%;
   user-select: none;
 }
 
